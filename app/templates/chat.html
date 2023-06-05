@@ -31,7 +31,7 @@
             var messageInput = document.getElementById('message-input');
             var message = messageInput.value.trim();
 
-            // handle blank message
+            // handle blank message case
             if (message !== '') {
                 socket.emit('send_message', { message: message });
                 messageInput.value = ''; // empty out the message input so future inputs can be used
