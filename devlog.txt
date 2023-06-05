@@ -1,0 +1,31 @@
+Fortnite
+Nakib Abedin
+David Deng
+Eric Sohel
+Weichen Liu
+pd 8
+---------------------------------
+Twitter Clone
+
+ ______   ______   __   __   __       ______   _______     
+/_____/\ /_____/\ /_/\ /_/\ /_/\     /_____/\ /______/\    
+\:::_ \ \\::::_\/_\:\ \\ \ \\:\ \    \:::_ \ \\::::__\/__  
+ \:\ \ \ \\:\/___/\\:\ \\ \ \\:\ \    \:\ \ \ \\:\ /____/\ 
+  \:\ \ \ \\::___\/_\:\_/.:\ \\:\ \____\:\ \ \ \\:\\_  _\/ 
+   \:\/.:| |\:\____/\\ ..::/ / \:\/___/\\:\_\ \ \\:\_\ \ \ 
+    \____/_/ \_____\/ \___/_   \_____\/ \_____\/ \_____\/ 
+==============================================================
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+NakibA -- 2023-06-02 12:04
+--------------------------------------------------------------
+* Initialized flask app that loads "No Hablo Queso" so that we have the basics setup
+
+NakibA -- 2023-06-04 20:10
+--------------------------------------------------------------
+* Wrote the twitter_api.py file to setup the OAuth needed in order to use the twitter API
+* Realized that the twitter API can't be used in the manner in which we envisioned and came up with an alternate plan
+
+ALL -- 2023-06-04 23:28
+--------------------------------------------------------------
+Revised design doc: Fixed up some improper terminology, revised the plan for twitter API since we have limited features with the API, 
