@@ -34,4 +34,24 @@ def printKeys():
     print("access_token_secret: " + access_token_secret)
     print("bearer_token: " + bearer_token)
 
-printKeys()
+## Test if keys are assigned the desired value
+#printKeys()
+
+# set up OAuth
+auth = tweepy.OAuthHandler(api_key,api_key_secret)
+auth.set_access_token(access_token, access_token_secret)
+api = tweepy.API(auth)
+
+# Testing how to get tweet timeline
+# public_tweets = api.home_timeline()
+# print(public_tweets)
+# curl "https://api.twitter.com/2/users/by/username/$FortniteSoftDev" -H "Authorization: Bearer $"
+
+
+
+
+
+
+
+
+
