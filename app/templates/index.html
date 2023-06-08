@@ -11,20 +11,24 @@
     <script src='main.js'></script>
 </head>
 <body>
-    <nav style="display: flex; flex-direction: column;">
-        <div class="button" style="display: flex; flex-direction: row; gap: 10px;">
+    <nav style="display: flex; flex-direction: column; gap: 25px; width: min-content; margin-left: 55px; margin-top: 17px;">
+        <div class="button">
             <div class="icon">
-                <img src="{{ url_for('static', filename='search.png') }}" style="height: 25px;">
+                <img src="{{ url_for('static', filename='icon.avif') }}" style="height: 25px;">
+            </div>
+        </div>
+        <div class="button" style="display: flex; flex-direction: row; gap: 20px;">
+            <div class="icon">
+                <img src="{{ url_for('static', filename='search.png') }}" style="height: 23px;">
             </div>
             <div class="text" style="font-family: 'Chirp', sans-serif; font-size: 20px; font-weight: bold;">Explore</div>
         </div>
-        <div style="display: flex; flex-direction: row; gap: 10px;" class="button">
+        <div style="display: flex; flex-direction: row; gap: 20px;" class="button">
             <div class="icon">
-                <img src="{{ url_for('static', filename='settings.svg')}}" style="height: 25px;">
+                <img src="{{ url_for('static', filename='settings.png')}}" style="height: 23px;">
             </div>
             <div class="text" style="font-family: 'Chirp', sans-serif; font-size: 20px; font-weight: bold;">Settings</div>
         </div>
     </nav>
-    <p> No Hablo Queso</p>
 </body>
 </html>
