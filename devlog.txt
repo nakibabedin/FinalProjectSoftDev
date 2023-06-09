@@ -37,3 +37,9 @@ NakibA -- 2023-06-08 22:17
 * Finished the implementation of the random tweet generation
 * Altered the python files in the api directory so they have functions that return the tweet content as opposed to the entire json
 * implemented the login mechanics on the backend; will combine with frontend after david makes his changes
+
+NakibA -- 2023-06-09 12:15
+* Used Jinja2 to bring the data from the tweets table into the frontend
+* Spent 30 minutes debugging error with "sqlite3.InterfaceError: Error binding parameter 3 - probably unsupported type."
+* Realized that this error is coming from the riddles api; Reduced tweet generation to it's minimum viable from
+
