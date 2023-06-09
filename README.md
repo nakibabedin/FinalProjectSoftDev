@@ -10,3 +10,6 @@ Registration and Login: Users can create a new account by registering with a uni
 Tweeting: Once logged in, users can compose and post tweets, limited to a certain character count (e.g., 280 characters). Share your thoughts, ideas, or interesting findings with the world!
 
 Timeline: Users can view a chronological feed of tweets from the people they follow. Stay updated with the latest posts from your friends and favorite accounts.
+
+Following and Followers: Users can follow other accounts to see their tweets on their timeline. They can also view their list of followers and manage their own followership.
+Likes and Retweets: Show appreciation for tweets by liking them. Users can also retweet interesting posts to share them with their own followers.
