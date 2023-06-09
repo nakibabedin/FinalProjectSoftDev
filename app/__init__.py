@@ -1,10 +1,13 @@
 from flask import Flask, render_template
+import tweet_generator
 
 app = Flask(__name__)
 
 @app.route('/')
 def explore():
-    return render_template('index.html')
+    tweet_generator.generate_tweet("NakibAbedin", "nakibabedin")
+    tweets = tweet_generator.return_tweets()
+    return render_template('index.html', data=tweets)
 
 @app.route('/login')
 def login():

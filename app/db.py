@@ -31,11 +31,13 @@ def create_tweet(pfp, username, name, content, likes):
     c.execute('INSERT INTO tweets VALUES (?, ?, ?, ?, ?)', (pfp, username , name , content , likes))
     db_close()
 
-def print_tweets():
+def return_tweets():
     c = db_connect()
     c.execute("SELECT * FROM tweets")
-    print(c.fetchall())
+    retVal = c.fetchall()
     db_close()
+    return retVal
+
 
 def db_user_init():
     c = db_connect()
