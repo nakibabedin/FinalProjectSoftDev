@@ -5,11 +5,15 @@ Welcome to Microtweet! This project aims to provide a simplified version of Twit
 
 Features
 
-Registration and Login: Users can create a new account by registering with a unique username and password. Existing users can log in to their accounts to access their personalized timelines.
+1. Registration and Login: Users can create a new account by registering with a unique username and password. Existing users can log in to their accounts to access their personalized timelines.
 
-Tweeting: Once logged in, users can compose and post tweets, limited to a certain character count (e.g., 280 characters). Share your thoughts, ideas, or interesting findings with the world!
+2. Tweeting: Once logged in, users can compose and post tweets, limited to a certain character count (e.g., 280 characters). Share your thoughts, ideas, or interesting findings with the world!
 
-Timeline: Users can view a chronological feed of tweets from the people they follow. Stay updated with the latest posts from your friends and favorite accounts.
+3. Timeline: Users can view a chronological feed of tweets from the people they follow. Stay updated with the latest posts from your friends and favorite accounts.
 
-Following and Followers: Users can follow other accounts to see their tweets on their timeline. They can also view their list of followers and manage their own followership.
-Likes and Retweets: Show appreciation for tweets by liking them. Users can also retweet interesting posts to share them with their own followers.
+4. Following and Followers: Users can follow other accounts to see their tweets on their timeline. They can also view their list of followers and manage their own followership.
+
+5. Likes and Retweets: Show appreciation for tweets by liking them. Users can also retweet interesting posts to share them with their own followers.
+
+6. Search: Users can search for tweets, hashtags, or accounts. Discover new content or find specific tweets using keywords or usernames.
+Notifications: Stay informed about interactions with your tweets, such as likes, retweets, and new followers, through notifications.
