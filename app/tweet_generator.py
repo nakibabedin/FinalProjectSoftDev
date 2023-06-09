@@ -8,7 +8,6 @@ Tweet Components:
 3) Name
 4) Tweet content
 4) Likes
-5) Comments
 '''
 
 def generate_pfp():
