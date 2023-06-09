@@ -43,19 +43,38 @@
             </header>
         </div>
 
-        <div id="main">
-            <h1>THIS IS WHERE THE BLOCK OF TWEETS WILL GO</h1>
-            <div class="tweet-container">
-                <ul>
-                    {% for row in data|reverse %}
-                        <li>{{ row }}</li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
+        <div id="main" style="padding-left: 13vw; padding-right: 13vw;">
+            <!-- The html and css for each tweet was built with help of Chat GPT -->
+            {% for tweet in data|reverse %}
 
-        <div id="right-sidebar" style="margin-right:10vw">
-            THIS IS WHERE THERE TRENDING STUFF WILL GO
+            <div class="twitter-comment">
+                <div class="comment-header">
+                  <img src="{{tweet[0]}}" alt="Profile Picture">
+                  <span class="username">{{tweet[2]}}</span>
+                  <span class="name">@{{tweet[1]}} </span>
+                </div>
+                <div class="comment-body">
+                  <p>{{tweet[3]}}</p>
+                </div>
+                <div class="comment-actions">
+                  <a href="#">{{tweet[4]}} Likes</a>
+                </div>
+              </div>
+            <!-- WORKING CODE <div class="tweet">
+                <div class="tweet-container">
+                    <div class="profile-picture">
+                        <img src="{{tweet[0]}}" alt="Profile Picture">
+                    </div>
+                    <div class="tweet-content">
+                        <div class="username">{{tweet[1]}}</div>
+                        <div class="message">{{tweet[3]}}</div>
+                    </div>
+                </div>
+            </div> -->
+            {% endfor %}
+        </div>
+        <div>
+            This is the third column lol
         </div>
     </div>
 </body>

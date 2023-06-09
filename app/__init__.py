@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def explore():
-    tweet_generator.generate_tweet("NakibAbedin", "nakibabedin")
+    tweet_generator.generate_tweet("nakibabedin", "Nakib Abedin")
     tweets = tweet_generator.return_tweets()
     return render_template('index.html', data=tweets)
 

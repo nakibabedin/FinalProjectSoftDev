@@ -49,3 +49,85 @@ body{
     display: flex;
     flex-direction: row
 }
+
+.tweet {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.profile-picture {
+    margin-right: 10px;
+}
+
+.profile-picture img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.username {
+    font-weight: bold;
+}
+
+.message {
+    margin-top: 5px;
+}
+
+.twitter-comment {
+    width: 450px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 12px;
+    line-height: 1.5;
+    color: black;
+    text-align: center;
+    border: 1px blanchedalmond;
+  }
+
+  .comment-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .comment-header img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  .comment-header .username {
+    font-weight: bold;
+    margin-right: 7px;
+  }
+
+  .comment-header .name {
+    margin-right: 7px;
+  }
+
+  .comment-body {
+    text-align: left;
+    margin-bottom: 10px;
+    margin-left: 40px;
+  }
+
+  .comment-actions {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 30px;
+  }
+
+  .comment-actions a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #1da1f2;
+  }
+
+  .comment-actions a:hover {
+    text-decoration: underline;
+  }
