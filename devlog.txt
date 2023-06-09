@@ -29,3 +29,11 @@ NakibA -- 2023-06-04 20:10
 ALL -- 2023-06-04 23:28
 --------------------------------------------------------------
 Revised design doc: Fixed up some improper terminology, revised the plan for twitter API since we have limited features with the API, 
+
+NakibA -- 2023-06-07 14:00
+* Worked on the implementation of the random tweet generation
+
+NakibA -- 2023-06-08 22:17
+* Finished the implementation of the random tweet generation
+* Altered the python files in the api directory so they have functions that return the tweet content as opposed to the entire json
+* implemented the login mechanics on the backend; will combine with frontend after david makes his changes
