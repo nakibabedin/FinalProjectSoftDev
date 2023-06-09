@@ -43,7 +43,11 @@ NakibA -- 2023-06-09 12:15
 * Spent 30 minutes debugging error with "sqlite3.InterfaceError: Error binding parameter 3 - probably unsupported type."
 * Realized that this error is coming from the riddles api; Reduced tweet generation to it's minimum viable from
 
-Nakib -- 2023-06-09 14:06
+NakibA -- 2023-06-09 14:06
 * Reorganized the frontend so that it is more friendly to modular design
 * Setup three columns using chat gpt
 
+Nakib -- 2023 06-09 17:42
+* Used ChatGPT to setup the HTML and CSS for each tweet
+* Filled in the profile picture, username, name, and other tweet components using Jinja2
+* minimum viable product is now secured
