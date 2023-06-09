@@ -5,7 +5,7 @@ db = None
 
 def db_connect():
     global db
-    connection = sqlite3.connect(DB_file)
+    db = sqlite3.connect(DB_file)
     return db.cursor()
 
 def db_close():
@@ -22,7 +22,21 @@ def tweet_table_init():
     4) Likes
     '''
     c =  db_connect()
-    c.execute("CREATE TABLE IF NOT EXISTS stories (pfp text, username text, name text, content text, likes int)")
+    c.execute("CREATE TABLE IF NOT EXISTS tweets (pfp text, username text, name text, content int, likes int)")
     db_close()
+
+def create_tweet(pfp, username, name, content, likes):
+    c = db_connect()
+    c.execute('INSERT INTO tweets VALUES (?, ?, ?, ?, ?)', (pfp, username , name , content , likes))
+    db_close()
+
+def print_tweets():
+    c = db_connect()
+    c.execute("SELECT * FROM tweets")
+    print(c.fetchall())
+    db_close()
+
+
+
 
 
