@@ -11,43 +11,52 @@
     <script src='main.js'></script>
 </head>
 <body>
-    <header class="flex" style="width: 200px; align-items: flex-end;">
-        <div class="container flex" style="height: 100%; position: fixed;">
-            <div class=" button flex" style="align-items: flex-start;">
-                <img class="flex" src="{{ url_for('static', filename='icon.avif') }}" style="height: 25px;">
+    <div id="layout">
+        <!-- Three Column layout was done using the help of chat gpt -->
+        <div id="left-sidebar">
+            <header class="flex" style="width: 200px; align-items: flex-end;">
+                <div class="container flex" style="height: 100%; position: fixed;">
+                    <div class="button flex" style="align-items: flex-start;">
+                        <img class="flex" src="{{ url_for('static', filename='icon.avif') }}" style="height: 25px;">
+                    </div>
+        
+                    <nav class="navigation flex">
+                        <a class="link flex">
+                            <div class="button flex">
+                                <div class="flex">
+                                    <img src="{{ url_for('static', filename='search.png') }}" style="height: 23px;">
+                                </div>
+                                <div class="text" style="font-weight: bold;">Explore</div>
+                            </div>
+                        </a>
+        
+                        <a class="link flex">
+                            <div class="button flex">
+                                <div class="flex">
+                                    <img src="{{ url_for('static', filename='settings.png')}}" style="height: 23px;">
+                                </div>
+                                <div class="text">Settings</div>
+                            </div>
+                        </a>
+                    </nav>
+                </div>
+            </header>
+        </div>
+
+        <div id="main">
+            <h1>THIS IS WHERE THE BLOCK OF TWEETS WILL GO</h1>
+            <div class="tweet-container">
+                <ul>
+                    {% for row in data|reverse %}
+                        <li>{{ row }}</li>
+                    {% endfor %}
+                </ul>
             </div>
+        </div>
 
-            <nav class="navigation flex">
-                <a class="link flex">
-                    <div class="button flex">
-                        <div class="flex">
-                            <img src="{{ url_for('static', filename='search.png') }}" style="height: 23px;">
-                        </div>
-                        <div class="text" style="font-weight: bold;">Explore</div>
-                    </div>
-                </a>
-
-                <a class="link flex">
-                    <div class="button flex">
-                        <div class="flex">
-                            <img src="{{ url_for('static', filename='settings.png')}}" style="height: 23px;">
-                        </div>
-                        <div class="text">Settings</div>
-                    </div>
-                </a>
-            </nav>
-            
+        <div id="right-sidebar" style="margin-right:10vw">
+            THIS IS WHERE THERE TRENDING STUFF WILL GO
         </div>
     </div>
-    </header>
-
-    <div style="display: flex; align-items: center; justify-content: center; width: 100%;padding: 150px;">
-        <ul>
-            {% for row in data %}
-                <li>{{ row }}</li>
-            {% endfor %}
-        </ul>
-    </div>
-    
 </body>
 </html>

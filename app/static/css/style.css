@@ -2,6 +2,10 @@ html {
     font-family: 'Chirp', sans-serif;
     top: 0;
 }
+body{
+    height: 100%;
+    width: 100%;
+}
 
 .flex {
     display: flex;
@@ -39,4 +43,9 @@ html {
     font-size: 20px;
     margin-left: 20px;
     margin-right: 16px;
+}
+
+#layout{
+    display: flex;
+    flex-direction: row
 }
