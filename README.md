@@ -17,3 +17,16 @@ Features
 
 6. Search: Users can search for tweets, hashtags, or accounts. Discover new content or find specific tweets using keywords or usernames.
 Notifications: Stay informed about interactions with your tweets, such as likes, retweets, and new followers, through notifications.
+
+
+Installation
+
+Clone the repository: git clone _______________________________
+
+Tech Used
+
+Node.js: A JavaScript runtime environment used for server-side development.
+Express: A web application framework for Node.js, simplifying the development of server-side applications.
+React: A JavaScript library for building user interfaces.
+MySQL: A relational database management system for storing application data.
+HTML and CSS: Markup and styling languages used for the application's frontend.
