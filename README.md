@@ -21,7 +21,7 @@ Notifications: Stay informed about interactions with your tweets, such as likes,
 
 Installation
 
-Clone the repository: git clone _______________________________
+Clone the repository: git clone git@github.com:nakibabedin/FinalProjectSoftDev.git
 
 Tech Used
 
