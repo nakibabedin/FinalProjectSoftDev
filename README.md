@@ -35,3 +35,7 @@ HTML and CSS: Markup and styling languages used for the application's frontend.
 Citations: 
 
 Chatgpt was used in some portions of this project to speed up the engineering process
+
+
+
+Project for Stuyvesant Software development Class 
