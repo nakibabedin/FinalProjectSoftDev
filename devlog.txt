@@ -56,5 +56,7 @@ NakibA -- 2023-06-10 17:58
 * Created minimum viable tweet creation feature (chat GPT helped out with the logic)
 * Will improve tweet creation when login is sorted out
 
-
-
+Weichen -- 2023 06-10 19:45
+* Designed the login and signup page with css
+* Commented out some portions
+* rerouted some stuff
