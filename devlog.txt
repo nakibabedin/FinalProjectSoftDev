@@ -51,3 +51,8 @@ Nakib -- 2023 06-09 17:42
 * Used ChatGPT to setup the HTML and CSS for each tweet
 * Filled in the profile picture, username, name, and other tweet components using Jinja2
 * minimum viable product is now secured
+
+Weichen -- 2023 06-10 19:45
+* Designed the login and signup page with css
+* Commented out some portions
+* rerouted some stuff
