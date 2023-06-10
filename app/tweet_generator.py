@@ -31,8 +31,14 @@ def generate_content():
     return generate_content_uselessfacts()
 
 def generate_tweet(username, name):
+    # generates an random tweet that is meant to simulate tweets from the outside world
     db.tweet_table_init()
     db.create_tweet(generate_pfp(), username, name, generate_content(), random.randint(1,100000))
+
+def generate_user_tweet(username, name, content):
+    # used to generate a new tweet where the user decides what the content is
+    db.tweet_table_init()
+    db.create_tweet(generate_pfp(), username, name, content, random.randint(1,100000))
 
 def return_tweets():
     return db.return_tweets()

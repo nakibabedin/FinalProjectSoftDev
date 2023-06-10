@@ -13,7 +13,7 @@
 <body>
     <div id="layout">
         <!-- Three Column layout was done using the help of chat gpt -->
-        <div id="left-sidebar">
+        <div id="left-sidebar" style="padding-left: 5vw;">
             <header class="flex" style="width: 200px; align-items: flex-end;">
                 <div class="container flex" style="height: 100%; position: fixed;">
                     <div class="button flex" style="align-items: flex-start;">
@@ -43,7 +43,17 @@
             </header>
         </div>
 
-        <div id="main" style="padding-left: 13vw; padding-right: 13vw;">
+        <div id="main" style="padding-left: 8vw; padding-right: 8vw;">
+
+            <!-- User creates new tweet -->
+            <!-- Chat GPT helped with the logic of the tweet creation algorithm -->
+            <form action="/create_tweet" method="POST">
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="text" name="name" placeholder="Name" required>
+                <textarea name="content" placeholder="Tweet content" required></textarea>
+                <button type="submit">Create Tweet</button>
+            </form>
+
             <!-- The html and css for each tweet was built with help of Chat GPT -->
             {% for tweet in data|reverse %}
 
