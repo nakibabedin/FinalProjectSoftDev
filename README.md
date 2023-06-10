@@ -30,3 +30,8 @@ Express: A web application framework for Node.js, simplifying the development of
 React: A JavaScript library for building user interfaces.
 MySQL: A relational database management system for storing application data.
 HTML and CSS: Markup and styling languages used for the application's frontend.
+
+
+Citations: 
+
+Chatgpt was used in some portions of this project to speed up the engineering process
