@@ -11,7 +11,7 @@
     <div class="signup container">
         <h1>Sign Up</h1>
         <div class="signup-text">Signing up for an account will allow you make tweets!</div>
-        <form  class= "signup form" action="/profile" method="POST">
+        <form  class= "signup form" action="/newaccount" method="POST">
             Username:
             <input type="text" name="username" required>
             Password:
@@ -21,8 +21,6 @@
             <input type="submit" name="signup">
             {% if error == 'signup' %}
             The user already exists
-            {% elif error == 'confirmation' %}
-            Your password was not the same as the confirmation
             {% endif %}
         </form>
     </div>
