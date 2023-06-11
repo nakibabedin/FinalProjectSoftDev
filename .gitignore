@@ -13,7 +13,7 @@ api_key_secret.txt
 bearer_token.txt
 
 # secret session key
-app.secret.key.txt
+app_secret_key.txt
 riddles.txt
 
 # Byte-compiled / optimized / DLL files
