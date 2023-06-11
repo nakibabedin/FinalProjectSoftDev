@@ -38,10 +38,9 @@ def return_tweets():
     db_close()
     return retVal
 
-
 def db_user_init():
     c = db_connect()
-    c.execute("CREATE TABLE IF NOT EXISTS users (username text, password text)")
+    c.execute("CREATE TABLE IF NOT EXISTS users (username text, password text, name text)")
     db_close()
 
 ## Refactored from project p00 by Rice Explosion (Nakib Abedin, Donald Bi, Wilson Mach)
@@ -52,18 +51,15 @@ def check_user_not_exists(username): #checks if user doesn't exist, returns True
     c.execute('SELECT username FROM users WHERE username=?',(username,))
     user = c.fetchone()
     db_close()
-    print(user)
-    print(username)
     if user:
         return False
     return True
 
 #for signing up
-def create_new_user(username, password): #creates new user
+def create_new_user(username, password, name): #creates new user
     c = db_connect()
-    c.execute('INSERT INTO users VALUES (?,?)',(username, password))
+    c.execute('INSERT INTO users VALUES (?,?,?)',(username, password, name))
     c.execute("SELECT * from users")
-    print(len(c.fetchall()))
     db_close()
 
 #for logging in
@@ -75,6 +71,15 @@ def check_credentials(username, password): #checks if there exists username and 
     if user:
         return True
     return False
+
+#given username, returns name
+def get_name(username):
+    c = db_connect()
+    c.execute('SELECT name FROM users WHERE username=?', (username,))
+    user = c.fetchone()
+    db_close()
+    return user[0]
+
 
 
 

@@ -1,6 +1,9 @@
 # virutal environment
 venv
 
+#database
+data.db
+
 # API Keys 
 #################
 access_token_secret.txt
@@ -8,6 +11,10 @@ access_token.txt
 api_key.txt
 api_key_secret.txt
 bearer_token.txt
+
+# secret session key
+app.secret.key.txt
+riddles.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
