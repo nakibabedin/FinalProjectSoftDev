@@ -60,3 +60,9 @@ Weichen -- 2023 06-10 19:45
 * Designed the login and signup page with css
 * Commented out some portions
 * rerouted some stuff
+
+NakibA -- 2023-06-11 10:46
+* implemented session to improve the tweet mechanics
+* session will allow us to start working on the chat feature
+* used ChatGPT to help with the algorithm to figure out how to have the user generated tweet show up at the top
+* needed to track where the redirect came from so we used a "referrer" varaible in the session

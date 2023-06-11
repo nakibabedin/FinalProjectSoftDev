@@ -47,10 +47,12 @@
 
             <!-- User creates new tweet -->
             <!-- Chat GPT helped with the logic of the tweet creation algorithm -->
-            <form action="/create_tweet" method="POST">
-                <textarea name="content" placeholder="Tweet content" required></textarea>
-                <button type="submit">Create Tweet</button>
-            </form>
+            <div id="user-tweet-container">
+                <form action="/create_tweet" method="POST">
+                    <textarea name="content" placeholder="Tweet content" required></textarea>
+                    <button type="submit">Tweet</button>
+                </form>
+            </div>
 
             <!-- The html and css for each tweet was built with help of Chat GPT -->
             {% for tweet in data|reverse %}

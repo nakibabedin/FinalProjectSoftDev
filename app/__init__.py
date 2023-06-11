@@ -8,7 +8,7 @@ app = Flask(__name__)
 secret_key_file = open("keys/app_secret_key.txt", "r")
 secret_key = secret_key_file.read()
 app.secret_key = secret_key
-secret_key_file.close
+secret_key_file.close()
 
 @app.route('/')
 def login():
@@ -25,8 +25,17 @@ def signin():
 
 @app.route('/explore')
 def explore():
+    #check if the user just created a new tweet (ChatGPT helped with logic)
+    if("referrer" in session):
+        referrer = session['referrer']
+        del session['referrer']
+        if (referrer == 'create_tweet'):
+            tweets = tweet_generator.return_tweets()
+            return render_template('index.html', data=tweets)
+        
     tweet_generator.generate_tweet("nakibabedin", "Nakib Abedin")
     tweets = tweet_generator.return_tweets()
+    
     return render_template('index.html', data=tweets)
 
 @app.route('/signup')
@@ -51,6 +60,12 @@ def newaccount():
 
 @app.route("/create_tweet", methods=['POST'])
 def create_tweet():
+
+    #the following will be used in order to ensure that the user generated tweet is 
+    #at the top of the sequence of tweets
+    session["referrer"] = "create_tweet"
+    
+    
     username = session['username']
     name = session['name']
     content = request.form['content']
@@ -58,7 +73,6 @@ def create_tweet():
     tweet_generator.generate_user_tweet(username, name, content)
 
     return redirect("/explore")
-
 
 if __name__ == '__main__':
     app.debug = True
