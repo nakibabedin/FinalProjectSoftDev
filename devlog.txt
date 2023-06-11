@@ -71,6 +71,12 @@ NakibA -- 2023-06-09 14:06
 * Reorganized the frontend so that it is more friendly to modular design
 * Setup three columns using chat gpt
 
+
+EricS -- 2023-06-09 1:52
+--------------------------------------------------------------
+* Used chat gpt in order to convert our design doc into a full fledged read me for our project. 
+
+
 NakibA -- 2023 06-09 17:42
 * Used ChatGPT to setup the HTML and CSS for each tweet
 * Filled in the profile picture, username, name, and other tweet components using Jinja2
