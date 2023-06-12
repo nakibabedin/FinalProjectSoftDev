@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, redirect, session
+from flask_socketio import SocketIO, send, emit
 import tweet_generator
 import db
 
@@ -9,6 +10,29 @@ secret_key_file = open("keys/app_secret_key.txt", "r")
 secret_key = secret_key_file.read()
 app.secret_key = secret_key
 secret_key_file.close()
+
+## Setup Socket
+socketio = SocketIO(app)
+
+# Consulted Primary Documentation --> https://flask-socketio.readthedocs.io/en/latest/
+# Consulted the howto document courtesy of Sadi Nirloy and Ivan Yeung https://github.com/stuy-softdev/notes-and-code/blob/main/how-to/howto_Flask-SocketIO.md
+# Asked our friend ChatGPT to fill in the holes in our implementation of sockets
+
+# @socketio.on('disconnect')
+# def handle_disconnect():
+#     print('Client disconnected')
+
+@socketio.on('join')
+def handle_join(data):
+    # username = data['username']
+    join_message = f'{session["username"]} has joined the chat'
+    emit('new_message', {'username': 'ChatBot', 'message': join_message}, broadcast=True)
+
+@socketio.on('send_message')
+def handle_message(data):
+    username = session['username']
+    message = data['message']
+    emit('new_message', {'username': username, 'message': message}, broadcast=True)
 
 @app.route('/')
 def login():
@@ -76,6 +100,12 @@ def create_tweet():
 
     return redirect("/explore")
 
+@app.route("/chat", methods=["GET","POST"])
+def chat():
+    return render_template("chat.html")
+
+
 if __name__ == '__main__':
     app.debug = True
-    app.run()
+    # app.run()
+    socketio.run(app)
