@@ -66,3 +66,8 @@ NakibA -- 2023-06-11 10:46
 * session will allow us to start working on the chat feature
 * used ChatGPT to help with the algorithm to figure out how to have the user generated tweet show up at the top
 * needed to track where the redirect came from so we used a "referrer" varaible in the session
+
+NakibA -- 2023-06-12 00:56
+* used websockets in order to create the minimum viable chat feature
+* will use the websocket rooms feature that was mentioned in the howto tutorial in order to have direct one-on-one messages between two people
+* uploaded the code into the digital ocean droplet; unfortunately can't fill out the googform because team wasn't registered properly in repo of holdings

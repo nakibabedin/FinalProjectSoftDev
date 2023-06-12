@@ -25,7 +25,7 @@ socketio = SocketIO(app)
 @socketio.on('join')
 def handle_join(data):
     # username = data['username']
-    join_message = f'{session["username"]} has joined the chat'
+    join_message = f'{session["name"]} has joined the chat'
     emit('new_message', {'username': 'ChatBot', 'message': join_message}, broadcast=True)
 
 @socketio.on('send_message')
