@@ -19,8 +19,9 @@ def signin():
     if(db.check_credentials(request.form['username'], request.form['password'])):
         session['username'] = request.form['username']
         session['name'] = db.get_name(request.form['username'])
+        session['pfp'] = tweet_generator.generate_pfp()
         return redirect("/explore")
-    if(db.check_credentials(request.form['username'], request.form['password'])):
+    else:
         return render_template('login.html', error = 'login')
 
 @app.route('/explore')
@@ -68,9 +69,10 @@ def create_tweet():
     
     username = session['username']
     name = session['name']
-    content = request.form['content']
+    content = request.form['content']    
+    pfp = session['pfp']
 
-    tweet_generator.generate_user_tweet(username, name, content)
+    tweet_generator.generate_user_tweet(pfp, username, name, content)
 
     return redirect("/explore")
 

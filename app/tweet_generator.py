@@ -35,10 +35,10 @@ def generate_tweet(username, name):
     db.tweet_table_init()
     db.create_tweet(generate_pfp(), username, name, generate_content(), random.randint(1,100000))
 
-def generate_user_tweet(username, name, content):
+def generate_user_tweet(pfp, username, name, content):
     # used to generate a new tweet where the user decides what the content is
     db.tweet_table_init()
-    db.create_tweet(generate_pfp(), username, name, content, random.randint(1,100000))
+    db.create_tweet(pfp, username, name, content, 0)
 
 def return_tweets():
     return db.return_tweets()
