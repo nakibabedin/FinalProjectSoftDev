@@ -13,7 +13,7 @@
 </head>
 <body>
     <div id="layout">
-        <!-- Three Column layout was done using the help of chat gpt -->
+        <!-- Three Column layout spacing was done using the help of chat gpt -->
         <div id="left-sidebar" style="padding-left: 5vw;">
             <header class="flex" style="width: 200px; align-items: flex-end;">
                 <div class="container flex" style="height: 100%; position: fixed;">
@@ -42,16 +42,12 @@
                     </nav>
                 </div>
             </header>
-            
-            <form>
-                <button id="signup-login" formaction="/chat">Chat</button>
-            </form>
         </div>
 
         <div id="main" style="padding-left: 8vw; padding-right: 8vw;">
 
             <!-- User creates new tweet -->
-            <!-- Free Chat GPT helped with the logic of the tweet creation algorithm -->
+            <!-- Chat GPT helped with the logic of the tweeting algorithm -->
             <div id="user-tweet-container">
                 <form action="/create_tweet" method="POST">
                     <textarea name="content" placeholder="Tweet content" required></textarea>
@@ -59,7 +55,7 @@
                 </form>
             </div>
 
-            <!-- The html and css for each tweet was built with help of Free version Chat GPT (6/2/2023) -->
+            <!-- Chat GPT helped with the CSS for each tweet -->
             {% for tweet in data|reverse %}
 
             <div class="twitter-comment">
@@ -85,6 +81,13 @@
             <form action="/logout" method="POST">
                 <button id="logout" type="submit">Logout</button>
             </form>
+
+            <div id="chat-button-container">
+                <form action="/chat">
+                    <button id="chat-button-index" type="submit">Chat</button>
+                </form>
+            </div>
+
         </div>
     </div>
 </body>

@@ -83,6 +83,11 @@ def newaccount():
         db.create_new_user(username, password, name)
         return redirect("/")
 
+@app.route('/logout', methods=["POST"])
+def logout():
+    session.pop('username')
+    return redirect("/")
+
 @app.route("/create_tweet", methods=['POST'])
 def create_tweet():
 
@@ -100,7 +105,7 @@ def create_tweet():
 
     return redirect("/explore")
 
-@app.route("/chat", methods=["GET","POST"])
+@app.route("/chat")
 def chat():
     return render_template("chat.html")
 
