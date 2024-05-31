@@ -41,6 +41,7 @@ def generate_user_tweet(pfp, username, name, content):
     db.create_tweet(pfp, username, name, content, 0)
 
 def return_tweets():
+    # returns all tweets in database collection
     return db.return_tweets()
 
 
