@@ -40,6 +40,7 @@ def return_tweets():
 
 def db_user_init():
     c = db_connect()
+    # sql commands to make new table on sqlite3 database
     c.execute("CREATE TABLE IF NOT EXISTS users (username text, password text, name text)")
     db_close()
 
